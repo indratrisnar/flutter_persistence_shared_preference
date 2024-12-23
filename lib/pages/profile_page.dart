@@ -26,6 +26,7 @@ class _ProfilePageState extends State<ProfilePage> {
   void removeName() async {
     final success = await profileData.removeName();
     log('removeName: $success');
+    if (success) nameController.clear();
   }
 
   initProfile() async {
